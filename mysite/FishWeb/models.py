@@ -1,8 +1,14 @@
 from django.db import models
 
 
-class Item(models.Model):
-    title = models.CharField(max_length=100)
-    price = models.FloatField()
-    quantity = models.IntegerField()
-    image = models.ImageField()
+
+
+
+class Form(models.Model):
+    email = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100)
+    company = models.CharField(max_length=100)
+    manager = models.CharField(max_length=100)
+    budget = models.IntegerField()
+    message = models.TextField(max_length= 200)

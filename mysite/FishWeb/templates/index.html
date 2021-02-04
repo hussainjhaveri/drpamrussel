@@ -1,3 +1,4 @@
+{% load crispy_forms_filters %}
 {% load static %}
 <!DOCTYPE html>
 
@@ -548,188 +549,279 @@
 
         <!-- Contact -->
         <section id="contact" class="section-6 odd form">
-            <div class="container">
-                <form id="leverage-form" class="multi-step-form">
-                    <input type="hidden" name="section" value="leverage_form">
+{#            <div class="container">#}
+{#                <form id="leverage-form" class="multi-step-form">#}
+{#                    <input type="hidden" name="section" value="leverage_form">#}
+{##}
+{#                    <input type="hidden" name="reCAPTCHA">#}
+{#                    <!-- Remove this field if you want to disable recaptcha -->#}
+{##}
+{#                    <div class="row">#}
+{#                        <div class="col-12 col-md-6 align-self-start text-center text-md-left">#}
+{##}
+{#                            <!-- Success Message -->#}
+{#                            <div class="row success message">#}
+{#                                <div class="col-12 p-0">#}
+{#                                    <div class="wait">#}
+{#                                        <div class="spinner-grow" role="status">#}
+{#                                            <span class="sr-only">Loading</span>#}
+{#                                        </div>#}
+{#                                        <h3 class="sending">SENDING</h3>#}
+{#                                    </div>#}
+{#                                    <div class="done">#}
+{#                                        <i class="icon bigger icon-check"></i>#}
+{#                                        <h3>Your message was sent successful. Thanks.</h3>#}
+{#                                        <a href="" class="btn mx-auto primary-button">#}
+{#                                            <i class="icon-refresh"></i>#}
+{#                                            REFRESH#}
+{#                                        </a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Steps Message -->#}
+{#                            <div class="row intro form-content">#}
+{#                                <div class="col-12 p-0">#}
+{##}
+{#                                    <!-- Step Title -->#}
+{#                                    <div class="step-title">#}
+{#                                        <h2 class="super effect-static-text">Let's Talk?</h2>#}
+{#                                        <p>Don't wait until tomorrow. Talk to one of our consultants today and learn how to get your <h3 class="super effect-static-text">FREE MOCKUP NOW!</h3>#}
+{#                                    </div>#}
+{##}
+{#                                    <!-- Step Title -->#}
+{#                                    <div class="step-title">#}
+{#                                        <h2 class="super effect-static-text">Almost There</h2>#}
+{#                                        <p>We need some more important information to better understand how we can help you in the best possible way.</p>#}
+{#                                    </div>#}
+{##}
+{#                                    <!-- Step Title -->#}
+{#                                    <div class="step-title">#}
+{#                                        <h2 class="super effect-static-text">Are you Ready?</h2>#}
+{#                                        <p>Tell us a little about the project you need to create. This is valuable so that we can direct you to the ideal team.</p>#}
+{#                                    </div>#}
+{##}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Steps Group -->#}
+{#                            <div class="row text-center form-content">#}
+{#                                <div class="col-12 p-0">#}
+{#                                    <ul class="progressbar">#}
+{#                                        <li>Personal Details</li>#}
+{#                                        <li>Company Budget</li>#}
+{#                                        <li>Service Setup</li>#}
+{#                                    </ul>#}
+{##}
+{#                                    <!-- Group 1 -->#}
+{#                                    <fieldset class="step-group">#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12 input-group p-0">#}
+{#                                                <label>#}
+{#                                                    <input type="email" name="email" data-minlength="3" class="form-control field-email" placeholder="Email">#}
+{#                                                </label>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12 input-group p-0">#}
+{#                                                <label>#}
+{#                                                    <input type="text" name="name" data-minlength="3" class="form-control field-name" placeholder="Name">#}
+{#                                                </label>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12 input-group p-0">#}
+{#                                                <label>#}
+{#                                                    <input type="text" name="phone" data-minlength="3" class="form-control field-phone" placeholder="Phone">#}
+{#                                                </label>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="col-12 input-group p-0">#}
+{#                                            <a class="step-next btn primary-button">NEXT<i class="icon-arrow-right-circle left"></i></a>#}
+{#                                        </div>#}
+{#                                    </fieldset>#}
+{##}
+{#                                    <!-- Group 2 -->#}
+{#                                    <fieldset class="step-group">#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12 input-group p-0">#}
+{#                                                <label>#}
+{#                                                    <input type="text" name="company" data-minlength="3" class="form-control field-company" placeholder="Company">#}
+{#                                                </label>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12 input-group p-0">#}
+{#                                                <label>#}
+{#                                                    <input type="text" name="manager" data-minlength="3" class="form-control field-manager" placeholder="Manager">#}
+{#                                                </label>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12 input-group p-0">#}
+{#                                                <i class="icon-arrow-down"></i>#}
+{#                                                <label>#}
+{#                                                    <select name="budget" data-minlength="1" class="form-control field-budget">#}
+{#                                                        <option value="" selected disabled>What's your budget range?</option>#}
+{#                                                        <option>Less than $2.000</option>#}
+{#                                                        <option>$2.000 — $5.000</option>#}
+{#                                                        <option>$5.000 — $10.000</option>#}
+{#                                                        <option>$10,000+</option>#}
+{#                                                    </select>#}
+{#                                                </label>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="col-12 input-group p-0 d-flex justify-content-between justify-content-md-start">#}
+{#                                            <a class="step-prev btn primary-button mr-4"><i class="icon-arrow-left-circle"></i>PREV</a>#}
+{#                                            <a class="step-next btn primary-button">NEXT<i class="icon-arrow-right-circle left"></i></a>#}
+{#                                        </div>#}
+{#                                    </fieldset>#}
+{##}
+{#                                    <!-- Group 3 -->#}
+{#                                    <fieldset class="step-group">#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12 input-group p-0">#}
+{#                                                <label>#}
+{#                                                    <textarea name="message" data-minlength="3" class="form-control field-message" placeholder="Message" required></textarea>#}
+{#                                                </label>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="col-12 input-group p-0 d-flex justify-content-between justify-content-md-start">#}
+{#                                            <a class="step-prev btn primary-button mr-4"><i class="icon-arrow-left-circle"></i>PREV</a>#}
+{#                                            <a class="step-next btn primary-button">SEND<i class="icon-arrow-right-circle left"></i></a>#}
+{#                                        </div>#}
+{#                                    </fieldset>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{##}
+{#                        <div class="content-images col-12 col-md-6 pl-md-5 d-none d-md-block">#}
+{##}
+{#                            <!-- Step 1 -->#}
+{#							<div class="gallery">#}
+{#                                <a class="step-image" data-poster="assets/images/about-2.jpg" href="https://www.youtube.com/watch?v=wHc8LTGoLcM">#}
+{#                                    <i class="play-video icon-control-play"></i>#}
+{#                                    <div class="mask-radius"></div>#}
+{#                                    <img src="{% static 'img/pricing_lg.jpg' %}" class="fit-image" alt="Contact Us">#}
+{#                                </a>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Step 2 -->#}
+{#							<div class="gallery">#}
+{#                                <a class="step-image" href="{% static 'img/about-3.jpg' %}">#}
+{#                                    <img src="{% static 'img/about-3.jpg' %}" class="fit-image" alt="Contact Us">#}
+{#                                </a>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Step 3 -->#}
+{#							<div class="gallery">#}
+{#                                <a class="step-image" href="{% static 'img/about-4.jpg' %}">#}
+{#                                    <img src="{% static 'img/about-4.jpg' %}" class="fit-image" alt="Contact Us">#}
+{#                                </a>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Step 4 -->#}
+{#							<div class="gallery">#}
+{#                                <a class="step-image" href="{% static 'img/about-leverage.jpg' %}">#}
+{#                                    <img src="{% static 'img/about-leverage.jpg' %}" class="fit-image" alt="Contact Us">#}
+{#                                </a>#}
+{#                            </div>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                </form>#}
+{#            </div>#}
+{#                 <form method="POST" >#}
+{#                    {% csrf_token %}#}
+{#                    <div class="row align-items-stretch mb-12">#}
+{#                        <div class=" col-md-6">#}
+{#                            <div class="form-group">#}
+{##}
+{#                                {{ form.name|as_crispy_field }}#}
+{#                                <p class="help-block text-danger"></p>#}
+{#                            </div>#}
+{#                            <div class="form-group">#}
+{#                                {{ form.email|as_crispy_field }}#}
+{#                                <p class="help-block text-danger"></p>#}
+{#                            </div>#}
+{#                            <div class="form-group mb-md-0">#}
+{#                                {{ form.phone|as_crispy_field }}#}
+{#                                <p class="help-block text-danger"></p>#}
+{#                            </div>#}
+{#                            <div class="form-group mb-md-0">#}
+{#                                {{ form.company|as_crispy_field }}#}
+{#                                <p class="help-block text-danger"></p>#}
+{#                            </div>#}
+{#                            <div class="form-group mb-md-0">#}
+{#                                {{ form.manager|as_crispy_field }}#}
+{#                                <p class="help-block text-danger"></p>#}
+{#                            </div>#}
+{#                            <div class="form-group mb-md-0">#}
+{#                                {{ form.budget|as_crispy_field }}#}
+{#                                <p class="help-block text-danger"></p>#}
+{#                            </div>#}
+{##}
+{#                        </div>#}
+{#                        <div class="col-md-6">#}
+{#                            <div class="form-group form-group-textarea mb-md-0">#}
+{#                                {{ form.message|as_crispy_field }}#}
+{#                                <p class="help-block text-danger"></p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="text-center">#}
+{#                        <div id="success"></div>#}
+{#                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">SEND INQUIRY</button>#}
+{#                    </div>#}
+{##}
+{#                </form>#}
+            <div>
+                <h1>Contact Us </h1>
+            </div>
+             <form method="POST" >
+                    {% csrf_token %}
+                    <div class="row align-items-stretch mb-12">
+                        <div class=" col-md-6">
+                            <div class="form-group">
 
-                    <input type="hidden" name="reCAPTCHA">
-                    <!-- Remove this field if you want to disable recaptcha -->
-
-                    <div class="row">
-                        <div class="col-12 col-md-6 align-self-start text-center text-md-left">
-
-                            <!-- Success Message -->
-                            <div class="row success message">
-                                <div class="col-12 p-0">
-                                    <div class="wait">
-                                        <div class="spinner-grow" role="status">
-                                            <span class="sr-only">Loading</span>
-                                        </div>
-                                        <h3 class="sending">SENDING</h3>
-                                    </div>
-                                    <div class="done">
-                                        <i class="icon bigger icon-check"></i>
-                                        <h3>Your message was sent successful. Thanks.</h3>
-                                        <a href="" class="btn mx-auto primary-button">
-                                            <i class="icon-refresh"></i>
-                                            REFRESH
-                                        </a>
-                                    </div>
-                                </div>
+                                {{ form.name}}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                {{ form.email}}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                {{ form.phone}}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                {{ form.company}}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                {{ form.manager }}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group  mb-md-0">
+                                {{ form.budget}}
+                                <p class="help-block text-danger"></p>
                             </div>
 
-                            <!-- Steps Message -->
-                            <div class="row intro form-content">
-                                <div class="col-12 p-0">
-
-                                    <!-- Step Title -->
-                                    <div class="step-title">
-                                        <h2 class="super effect-static-text">Let's Talk?</h2>
-                                        <p>Don't wait until tomorrow. Talk to one of our consultants today and learn how to get your <h3 class="super effect-static-text">FREE MOCKUP NOW!</h3>
-                                    </div>
-
-                                    <!-- Step Title -->
-                                    <div class="step-title">
-                                        <h2 class="super effect-static-text">Almost There</h2>
-                                        <p>We need some more important information to better understand how we can help you in the best possible way.</p>
-                                    </div>
-
-                                    <!-- Step Title -->
-                                    <div class="step-title">
-                                        <h2 class="super effect-static-text">Are you Ready?</h2>
-                                        <p>Tell us a little about the project you need to create. This is valuable so that we can direct you to the ideal team.</p>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Steps Group -->
-                            <div class="row text-center form-content">
-                                <div class="col-12 p-0">
-                                    <ul class="progressbar">
-                                        <li>Personal Details</li>
-                                        <li>Company Budget</li>
-                                        <li>Service Setup</li>
-                                    </ul>
-
-                                    <!-- Group 1 -->
-                                    <fieldset class="step-group">
-                                        <div class="row">
-                                            <div class="col-12 input-group p-0">
-                                                <label>
-                                                    <input type="email" name="email" data-minlength="3" class="form-control field-email" placeholder="Email">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 input-group p-0">
-                                                <label>
-                                                    <input type="text" name="name" data-minlength="3" class="form-control field-name" placeholder="Name">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 input-group p-0">
-                                                <label>
-                                                    <input type="text" name="phone" data-minlength="3" class="form-control field-phone" placeholder="Phone">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 input-group p-0">
-                                            <a class="step-next btn primary-button">NEXT<i class="icon-arrow-right-circle left"></i></a>
-                                        </div>
-                                    </fieldset>
-
-                                    <!-- Group 2 -->
-                                    <fieldset class="step-group">
-                                        <div class="row">
-                                            <div class="col-12 input-group p-0">
-                                                <label>
-                                                    <input type="text" name="company" data-minlength="3" class="form-control field-company" placeholder="Company">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 input-group p-0">
-                                                <label>
-                                                    <input type="text" name="manager" data-minlength="3" class="form-control field-manager" placeholder="Manager">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 input-group p-0">
-                                                <i class="icon-arrow-down"></i>
-                                                <label>
-                                                    <select name="budget" data-minlength="1" class="form-control field-budget">
-                                                        <option value="" selected disabled>What's your budget range?</option>
-                                                        <option>Less than $2.000</option>
-                                                        <option>$2.000 — $5.000</option>
-                                                        <option>$5.000 — $10.000</option>
-                                                        <option>$10,000+</option>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 input-group p-0 d-flex justify-content-between justify-content-md-start">
-                                            <a class="step-prev btn primary-button mr-4"><i class="icon-arrow-left-circle"></i>PREV</a>
-                                            <a class="step-next btn primary-button">NEXT<i class="icon-arrow-right-circle left"></i></a>
-                                        </div>
-                                    </fieldset>
-
-                                    <!-- Group 3 -->
-                                    <fieldset class="step-group">
-                                        <div class="row">
-                                            <div class="col-12 input-group p-0">
-                                                <label>
-                                                    <textarea name="message" data-minlength="3" class="form-control field-message" placeholder="Message" required></textarea>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 input-group p-0 d-flex justify-content-between justify-content-md-start">
-                                            <a class="step-prev btn primary-button mr-4"><i class="icon-arrow-left-circle"></i>PREV</a>
-                                            <a class="step-next btn primary-button">SEND<i class="icon-arrow-right-circle left"></i></a>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
                         </div>
-
-                        <div class="content-images col-12 col-md-6 pl-md-5 d-none d-md-block">
-
-                            <!-- Step 1 -->
-							<div class="gallery">
-                                <a class="step-image" data-poster="assets/images/about-2.jpg" href="https://www.youtube.com/watch?v=wHc8LTGoLcM">
-                                    <i class="play-video icon-control-play"></i>
-                                    <div class="mask-radius"></div>
-                                    <img src="{% static 'img/pricing_lg.jpg' %}" class="fit-image" alt="Contact Us">
-                                </a>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                {{ form.message }}
+                                <p class="help-block text-danger"></p>
                             </div>
-
-                            <!-- Step 2 -->
-							<div class="gallery">
-                                <a class="step-image" href="{% static 'img/about-3.jpg' %}">
-                                    <img src="{% static 'img/about-3.jpg' %}" class="fit-image" alt="Contact Us">
-                                </a>
-                            </div>
-
-                            <!-- Step 3 -->
-							<div class="gallery">
-                                <a class="step-image" href="{% static 'img/about-4.jpg' %}">
-                                    <img src="{% static 'img/about-4.jpg' %}" class="fit-image" alt="Contact Us">
-                                </a>
-                            </div>
-
-                            <!-- Step 4 -->
-							<div class="gallery">
-                                <a class="step-image" href="{% static 'img/about-leverage.jpg' %}">
-                                    <img src="{% static 'img/about-leverage.jpg' %}" class="fit-image" alt="Contact Us">
-                                </a>
-                            </div>
-
                         </div>
                     </div>
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">SEND INQUIRY</button>
+                    </div>
+
                 </form>
-            </div>
         </section>
 
         <!-- Footer -->
