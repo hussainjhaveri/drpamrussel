@@ -9,8 +9,8 @@ class Form1(forms.ModelForm):
     phone = forms.CharField(label=' ', required=True, widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
     message = forms.CharField(label=' ',
                               widget=forms.Textarea(attrs={'placeholder': 'Message', 'cols': 30, 'rows': 1}))
-    company = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Company'}))
-    manager = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Manager'}))
+    company = forms.CharField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Company'}))
+    manager = forms.CharField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Manager'}))
     budget = forms.IntegerField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Budget'}))
 
     class Meta:
