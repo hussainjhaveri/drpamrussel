@@ -1,0 +1,618 @@
+/* You can add custom CSS and override boostrap styles in this file.  Remember, bootstrap is just CSS at the end of the day! */
+
+.buffer {
+    min-height: 50px;
+  }
+  
+  .navbar {
+    background-color: rgb(255, 255, 255);
+    color: #564A4A;
+    width: 100%;
+    
+  }
+  
+  .navbar .nav-item {
+    width: 100%;
+  }
+  
+  .navbar .nav-item:hover .nav-link {
+    background-color: whitesmoke;
+    border-radius: 15%;
+    height: 90%;
+  }
+  
+  .navbar .nav-item .nav-link {
+    border-radius: 15%;
+    height: 90%;
+  }
+
+  .nav-item {
+
+
+    white-space: nowrap;
+    
+  }
+
+  hr.hrid {
+    text-align: center;
+    width: 75%;
+    
+  }
+
+  hr.hrid2 {
+    text-align: center;
+    width: 12.5%;
+    height: 0;
+    
+  }
+
+  .servbod {
+    background-image: url("../img/beeBack3.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 15%;
+
+  }
+  
+  .credits {
+    height: 10%;
+    width: 40%;
+  }
+
+  .testhed {
+    color: white
+  }
+  
+  .credits_img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  } 
+
+  .servicesimg {
+    height: auto;
+    width: 80%;
+    object-fit: cover;
+    padding-bottom: 15px;
+} 
+  
+  .credits2 {
+    height: 10%;
+    width: 20%;
+  }
+  
+  .credits2_img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  } 
+  
+  
+  
+  
+  /* #logo-img{ 
+      margin: 3px 20px; 
+      -webkit-transition: 0.6s ease-out;
+      -moz-transition:  0.6s ease-out;
+      transition:  0.6s ease-out;
+  }
+  
+  #logo-img:hover {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  } */
+  
+  #hero-section {
+    /* This should be an image. */
+    /* background-image: url("../img/electricBoxes.jpg"); */
+    background-size: cover;
+    background-position: center;
+  
+    height: clamp(75vh, 80vh, 900vh);
+    position: relative;
+
+  }
+
+   #overlayer {
+    background: linear-gradient(rgba(71, 43, 71, 0.8), rgba(148, 141, 39, 0.8)), url("../img/electricBoxes.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background-size: cover;
+    background-position: center;
+   }
+
+   #overlayer2 {
+    background: linear-gradient(rgba(233, 233, 233, 0.8), rgba(148, 141, 39, 0.8)), url("../img/beeBack3.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    
+   }
+  
+
+  #hero-section-sec {
+    background-color: rgba(0, 0, 0, 0.815);
+
+  }
+  
+  #hero-section2 {
+    /* This should be an image. */
+    background-image: url("../img/lightbulbHero.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    position: relative;
+    height: clamp(75vh, 85vh, 100vh);
+  }
+
+  #hero-section3 {
+    /* This should be an image. */
+    background-image: url("../img/TED_Rethink.png");
+    background-size: cover;
+    background-position: center;
+
+  
+    height: clamp(75vh, 85vh, 100vh);
+    position: relative;
+    z-index: -2;
+  }
+
+  #hero-section4 {
+    /* This should be an image. */
+    background-size: cover;
+    background-position: center;  
+    height: clamp(75vh, 85vh, 100vh);
+    position: relative;
+  }
+
+  #hero-section5 {
+    /* This should be an image. */
+    background-size: cover;
+    background-position: center;
+    height: clamp(75vh, 85vh, 100vh);
+    position: relative;
+  }
+
+  #hero-section6 {
+    /* This should be an image. */
+    background-image: url("../img/tedQuote.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    position: relative;
+    height: clamp(75vh, 85vh, 100vh);
+  }
+
+  .boxen {
+    border: crimson;
+    border-width: 1.5px;
+    border-style: solid;
+  }
+
+  .carousel {
+      background-color: rgba(0, 0, 0, 0);
+  
+  
+  }
+
+  .fa-map-marked-alt {
+    color: white;
+    text-align: center;
+  }
+
+  .fa-envelope {
+    color: white;
+    text-align: center;
+  }
+
+  .fa-phone-alt {
+    color: white;
+    text-align: center;
+  }
+  
+  .carousel-inner {
+      width: 90vw;
+      height: 80vh;
+      background-color: rgba(0, 0, 0, 0);
+      padding-right: 20vw;
+      
+  }
+
+  .foottext {
+    color: white;
+    text-align: center;
+  }
+  
+  .carousel-inner img {
+      opacity: 0%;
+      
+      
+  }
+
+  .hb-text {
+    text-shadow: -.5px -.5px 0 rgb(255, 255, 255), .5px -.5px 0 rgb(255, 255, 255), -.5px .5px 0 rgb(255, 255, 255), .5px .5px 0 rgb(255, 255, 255);
+  }
+
+  .yel-text {
+    color: rgb(194, 248, 44);
+    text-shadow: -.5px -.5px 0 rgb(255, 255, 255), .5px -.5px 0 rgb(0, 0, 0), -.5px .5px 0 rgb(255, 255, 255), .5px .5px 0 rgb(0, 0, 0);
+  }
+  
+  .carousel-caption {
+    text-shadow: -.5px -.5px 0 rgb(255, 255, 255), .5px -.5px 0 rgb(255, 255, 255), -.5px .5px 0 rgb(255, 255, 255), .5px .5px 0 rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: clamp(.7rem, 7vw, 1.5rem);
+    background-color: rgba(107, 95, 95, 0);
+    top: 25%;
+    bottom: auto;
+
+  }
+  
+  /* layer for background of hero img */
+  /* #hero-section::after {
+  
+    } */
+  
+  
+  #navbarNav {
+    max-width: 100vw;
+    font-size: clamp(2vw, 8px, 8px);
+  }
+  
+  .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+  }
+  
+  .navbar-brand {
+    content: url("../img/hbe-logo.webp");
+    height: auto;
+    width: clamp(100px, 35vh, 500px);
+    max-width: 100vw;
+  
+  }
+  
+  #profile-img {
+    /* Change this values to work for you. */
+    padding: clamp(10px, 20vh, 100px) auto;
+    position: relative;
+  
+  
+    /* This should be an image */
+    content: url(https://media-exp1.licdn.com/dms/image/C4D03AQEDogWUIzHZwg/profile-displayphoto-shrink_200_200/0/1588973108545?e=1630540800&v=beta&t=8DTDQvMitH5MPX4gn6xCDLGynhJhTFLP3pvNEwgXd0c);
+    /* background-color: blue; */
+  
+    /* Change this values to work for you. */
+    height: clamp(100px, 20vh, 200px);
+  
+    /* Change this values to work for you. */
+    width: clamp(100px, 20vh, 200px);
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  
+  
+  .centering{
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 1000!important;
+  }
+  
+  .rounded-circle .border .border-primary .border-4 {
+    height: clamp(100px, 20vh, 200px);
+    width: clamp(100px, 20vh, 200px);
+  }
+  
+  #hero-section h2 {
+    /* How to center text? */
+    color: #564A4A;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(159, 225, 230), 1px -1px 0 rgb(159, 225, 230), -1px 1px 0 rgb(159, 225, 230), 1px 1px 0 rgb(159, 225, 230);
+    font-size: clamp(15vh, 75px, 20vh);
+    font-weight: bold;
+    /* Add responsive vertical margins via clamp? */
+    
+  }
+  
+  #hero-section2 h2 {
+    /* How to center text? */
+    color: #564A4A;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(159, 225, 230), 1px -1px 0 rgb(159, 225, 230), -1px 1px 0 rgb(159, 225, 230), 1px 1px 0 rgb(159, 225, 230);
+    font-size: clamp(15vh, 75px, 20vh);
+    font-weight: bold;
+    /* Add responsive vertical margins via clamp? */
+    
+  }
+
+  #hero-section3 h2 {
+    /* How to center text? */
+    color: #564A4A;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(159, 225, 230), 1px -1px 0 rgb(159, 225, 230), -1px 1px 0 rgb(159, 225, 230), 1px 1px 0 rgb(159, 225, 230);
+    font-size: clamp(15vh, 75px, 20vh);
+    font-weight: bold;
+    /* Add responsive vertical margins via clamp? */
+    
+  }
+
+  #hero-section4 h2 {
+    /* How to center text? */
+    color: #564A4A;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(159, 225, 230), 1px -1px 0 rgb(159, 225, 230), -1px 1px 0 rgb(159, 225, 230), 1px 1px 0 rgb(159, 225, 230);
+    font-size: clamp(15vh, 75px, 20vh);
+    font-weight: bold;
+    /* Add responsive vertical margins via clamp? */
+    
+  }
+
+  #hero-section5 h2 {
+    /* How to center text? */
+    color: #564A4A;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(159, 225, 230), 1px -1px 0 rgb(159, 225, 230), -1px 1px 0 rgb(159, 225, 230), 1px 1px 0 rgb(159, 225, 230);
+    font-size: clamp(15vh, 75px, 20vh);
+    font-weight: bold;
+    /* Add responsive vertical margins via clamp? */
+    
+  }
+  
+  /* .btn .btn-danger {
+    font-size: clamp(15vh, 75px, 20vh);
+  } */
+  
+  .vidbox {
+    text-align: center;
+
+  }
+  
+  .overlay1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 54, 54, 0.6);
+    z-index: -1;
+  }
+  
+  .vidtext {
+    text-align: center;
+    
+  }
+  
+  .vidi {
+    max-width: 100%;
+    height: auto;
+    
+  }
+  
+  #hero-section h4 {
+    /* How to center text? */
+    color: #564A4A;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(159, 225, 230), 1px -1px 0 rgb(159, 225, 230), -1px 1px 0 rgb(159, 225, 230), 1px 1px 0 rgb(159, 225, 230);
+    font-size: clamp(2vh, 25px, 7vh);
+    font-weight: bold;
+    font-family: 'Yellowtail', cursive;
+    /* Add responsive vertical margins via clamp? */
+    
+  }
+
+  html {
+    min-height: 100%;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    /* width: 100vw; */
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+  
+  .head3{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 6vh;
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 2vh;
+  
+  }
+  
+
+
+  .head32{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(4vh, 5vh, 8vh);
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 2vh;
+    color: cornsilk;
+  
+  }
+
+  .head33{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 2vh;
+  
+  }
+  
+  #mission-section{
+    background-color: white;
+    z-index: -2;
+  }
+  
+  #missss{
+    height: clamp(300px, 30vh, 450px);
+    width: clamp(450px, 40vh, 600px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+    margin-top: 1vh;
+    padding: auto;
+  }
+
+  .iframe2 {
+    /* width: clamp(10vw, 269PX, 20vw);
+     height: clamp(10vh, 476PX, 50vh); */
+     width: 269px;
+     height: 476px;
+  }
+
+  .iframe3 {
+    /* width: clamp(10vw, 269PX, 20vw); */
+    width: 269px;
+     /* height: clamp(10vh, 476PX, 50vh); */
+     height: auto;
+  }
+  
+  #pgra {
+    margin: 10vh, 0, 10vh, 0;
+    padding: 10vh, 0, 10vh, 0;
+  }
+  
+  .myperson {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: clamp(2vh, 20px, 7vh);
+  }
+  
+  
+  
+  
+  cont {
+    size: 100%;
+  }
+  
+  .mymiss {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: auto;
+  }
+  
+  #inspiration-section {
+    background-color: rgb(53, 149, 227);
+  }
+  
+  .carousel-item:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0, 0, 0, 0.4);
+  }
+  
+  .carousel-caption{
+    z-index: 100;
+  }
+  
+  .icryn{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* font-size: 60px; */
+    font-size: clamp(6vw, 60px, 12vw);
+    font-family: 'Titillium Web', sans-serif;
+  }
+  
+  .skill-image{
+    filter: grayscale(90%)
+  }
+  
+  .footer{
+    text-align: center;
+    padding-bottom: 12vh;
+    height: clamp(5vh, 8vh, 10vh);
+    bottom: 0;
+
+    width: 100%;
+  }
+
+  .pigga {
+    margin-bottom: -20px;
+    padding-bottom: -10vh;
+  }
+
+
+  #contact-section {
+    background-color: #212529;
+  }
+
+
+  /* css for form  */
+
+  .contact-form {
+    margin: 35px auto 0px auto;
+    width: 80%;
+  }
+  
+  .contact-form label {
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form input {
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .contact-form input:focus {
+    border-bottom: 2px solid #1a883f;
+  }
+  
+  .contact-form textarea {
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 3px;
+    width: 100%;
+    font-family: inter;
+    font-weight: normal;
+  }
+  
+  .contact-form textarea:focus {
+    border-bottom: 2px solid #1a883f;
+  }
+  
+  .contact-form button {
+    font-size: 19px;
+    width: 100%;
+    margin-top: 25px;
+    border: none;
+    padding: 12px 20px;
+    background-color: #22b352;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border-bottom: 3px solid #1a883f;
+  }
+  
+  .contact-form button:hover {
+    background-color: #1a883f;
+    border-bottom: 3px solid #22b352;
+  }
