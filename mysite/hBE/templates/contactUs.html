@@ -1,5 +1,6 @@
 <!-- if i umute this it breaks the css.. interesting /{/%/ extends "index.html" /%/}/ -->
 <!DOCTYPE html>
+{% load crispy_forms_tags%}
 <html>
   <head>
     <meta charset="utf-8">
@@ -83,23 +84,60 @@
 <section>
   <h1>send us an email</h1>
   <p>send us a message please</p>
-  <form class="contact-form">
-    <label for="">Name</label><br />
-    <input class="name" type="text" placeholder="name" /><br />
-    <label for="">Email</label><br />
-    <input class="email" type="email" placeholder="email" /><br />
-    <label for="">Message</label><br />
-    <textarea
-      class="message"
-      name=""
-      id=""
-      cols="30"
-      rows="10"
-      placeholder="message"
-    ></textarea
-    ><br />
-    <button type="button" onclick="test()">Submit</button>
-  </form>
+      <form enctype="multipart/form-data" method ="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.name|as_crispy_field}}
+                {{ form.email|as_crispy_field}}
+                {{ form.message|as_crispy_field }}
+{#                <p class="text-white"></p>#}
+{#                <input class="text-white" type="file" id="resume" name="resume" style="display:none;"/>#}
+{#                <label for="resume" style='#}
+{#                background-color:white; /* Green */#}
+{#                border: 200px #1d2124;#}
+{#                border-radius:5px ;#}
+{#                color: #737b83;#}
+{#                padding: 15px 32px;#}
+{#                text-align: center;#}
+{#                text-decoration: none;#}
+{#                display: inline-block;#}
+{#                font-size: 16px;#}
+{#                font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";#}
+{#                font-weight:700;#}
+{#                cursor:pointer;'#}
+{#                       ></label>#}
+
+
+            </div>
+            <div class="text-center">
+                <button class="btn btn-light btn-xl text-uppercase" id="sendMessageButton" type="submit">Submit</button>
+            </div>
+        </form>
+
+
+
+
+{#  <form class="contact-form">#}
+
+
+
+
+{#    <label for="">Name</label><br />#}
+{#    <input class="name" type="text" placeholder="name" /><br />#}
+{#    <label for="">Email</label><br />#}
+{#    <input class="email" type="email" placeholder="email" /><br />#}
+{#    <label for="">Message</label><br />#}
+{#    <textarea#}
+{#      class="message"#}
+{#      name=""#}
+{#      id=""#}
+{#      cols="30"#}
+{#      rows="10"#}
+{#      placeholder="message"#}
+{#    ></textarea#}
+{#    ><br />#}
+{#    <button type="button" onclick="test()">Submit</button>#}
+{#  </form>#}
 </section>
 
   <!-- Footer section -->
