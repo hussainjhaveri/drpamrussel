@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% load crispy_forms_tags%}
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -13,6 +15,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="text/javascript" src="/static/js/logic.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
 
 
    <!-- <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -26,8 +38,56 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
+    <!-- template stuff -->
+
+    		<!-- Basic -->
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">	
+    
+        <meta name="keywords" content="HTML5 Template" />
+            <meta name="description" content="Porto - Responsive HTML5 Template">
+            <meta name="author" content="okler.net">
+        <!-- TODO updata meta tags -->
+    
+            <!-- Favicon -->
+            <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+            <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+    
+            <!-- Mobile Metas -->
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    
+            <!-- Web Fonts  -->
+            <link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css">
+    
+            <!-- Vendor CSS -->
+            <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/static/vendor/fontawesome-free/css/all.min.css">
+            <link rel="stylesheet" href="/static/vendor/animate/animate.compat.css">
+            <link rel="stylesheet" href="/static/vendor/simple-line-icons/css/simple-line-icons.min.css">
+            <link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.carousel.min.css">
+            <link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.theme.default.min.css">
+            <link rel="stylesheet" href="/static/vendor/magnific-popup/magnific-popup.min.css">
+    
+            <!-- Theme CSS -->
+            <link rel="stylesheet" href="/static/css/theme.css">
+            <link rel="stylesheet" href="/static/css/theme-elements.css">
+            <link rel="stylesheet" href="/static/css/theme-blog.css">
+            <link rel="stylesheet" href="/static/css/theme-shop.css">
+    
+            <!-- Current Page CSS -->
+            <link rel="stylesheet" href="/static/vendor/circle-flip-slideshow/css/component.css">
+    
+            <!-- Skin CSS -->
+            <link id="skinCSS" rel="stylesheet" href="/static/css/skins/default.css">
+    
+            <!-- Theme Custom CSS -->
+            <link rel="stylesheet" href="/static/css/custom.css">
+    
+            <!-- Head Libs -->
+            <script src="/static/vendor/modernizr/modernizr.min.js"></script>
+
     <!-- Custom styles (these can extend bootstrap which is JUST CSS!) -->
-    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
 
   </head>
 
@@ -40,9 +100,97 @@
 
   
   <!-- PASTE NAVBAR CODE TO CUSTOMIZE -->
+    <header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+        <div class="header-body border-top-0">
+            <div class="header-top header-top-default border-bottom-0 bg-color-primary">
+                <div class="container">
+                    <div class="header-row py-2">
+                        <div class="header-column justify-content-start">
+                            <div class="header-row">
+                                <nav class="header-nav-top">
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item">
+                                            <span class="text-light text-4 opacity-7 ps-0">Call Us Today! (813) 421-2192</span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="header-column justify-content-end">
+                            <div class="header-row">
+                                <nav class="header-nav-top">
+                                    <ul class="nav nav-pills text-uppercase text-7">
+                                        <li class="nav-item nav-item-anim-icon d-none d-md-block">
+                                            <a class="nav-link ps-0 text-light opacity-7" href="https://www.linkedin.com/in/michele-durrance-b6885977/"><i class="fab fa-linkedin"></i></a>
+                                        </li>
+                                        <!-- <li class="nav-item nav-item-anim-icon d-none d-md-block">
+                                            <a class="nav-link text-light opacity-7 pe-0" href="contact-us.html"><i class="fas fa-angle-right"></i> Contact Us</a>
+                                        </li> -->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-container header-container-md container">
+                <div class="header-row">
+                    <div class="header-column">
+                        <div class="header-row">
+                            <div class="header-logo">
+                                <a href="/">
+                                    <img alt="Porto" width="300" height="auto" data-sticky-width="175" data-sticky-height="auto" src="/static/img/tbtLogoFinal-2.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-column justify-content-end">
+                        <div class="header-row">
+                            <div class="header-nav header-nav-line header-nav-bottom-line header-nav-bottom-line-no-transform header-nav-bottom-line-active-text-dark header-nav-bottom-line-effect-1 order-2 order-lg-1">
+                                <div class="header-nav-main header-nav-main-square header-nav-main-text-capitalize header-nav-main-text-size-2 header-nav-main-text-weight-600 header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
+                                    <nav class="collapse">
+                                        <ul class="nav nav-pills" id="mainNav">
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle active" href="/">
+                                                    Home
+                                                </a>
+                                            </li>
+                                            <li class="dropdown dropdown-mega">
+                                                <a class="dropdown-item dropdown-toggle" href="/assessments">
+                                                    Assessments
+                                                </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="/about">
+                                                    About Us
+                                                </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="/services">
+                                                    Forms/FAQ
+                                                </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="/contactUs">
+                                                    Contact
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                            </div>
 
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-lg p-0" id="navbar-scroll">
-    <div class="container-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+  <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-lg p-0">
+    <div class="container-fluid" id="stayy">
       <div class="collapse navbar-collapse justify-content-center">
         <ul class="navbar-nav">
           <li class="nav-item1">
@@ -59,47 +207,57 @@
       </div>
     </div>
   </nav>
-    <nav class="navbar navbar-expand-sm navbar-light shadow-lg p-2" id="navbar-scroll">
+    <nav class="navbar navbar-expand-sm navbar-light shadow-lg p-2 justify-content-end" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="/" style="color: #564A4A" id="logo-img"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services">Services</a>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="contactUs">Contact</a>
+            <a class="nav-link" href="assessments">Assessments</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about" tabindex="-1">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">Assessments</a>
+            <a class="nav-link" href="services" tabindex="-1">Forms/FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">Forms</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">FAQ</a>
+            <a class="nav-link" href="contactUs" tabindex="-1">Contact</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+  
+  {% if messages %}
+    {% for message in messages %}
+    
+    <div class="alert alert-primary bigboy" role="alert">
+      <p class="tomm">Thank you for your submission!</p>
+    </div>
 
+    <!-- <script>
+      alert("Thank you for your submission!");
+    </script> -->
+    <!-- <div class="container colorBGN2">
+      <div class="row">
+        <div class="col col-12">
+            <h1  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </h1>
+        </div>
+      </div>
+    </div> -->
+    {% endfor %}
+{% endif %}
 
 <!-- First Hero image with button -->
 
-<header id="overlayer">
+<!-- <header id="overlayer">
   <section id="hero-section">
     <div class="container centering2 boxenn">
       <h1 class="hb-text2">Welcome...<br> To Tampa Bay Testing</h1>
@@ -114,17 +272,181 @@
   </section>
 </header>
 
-<br><br>
+<br><br> -->
 
+<!-- First Hero Image is being replaced by carousel with overlay -->
+
+<!-- <section id="hero-section ">
+  <div class="container centering2 boxenn">
+    <h1 class="hb-text2">Welcome...<br> To Tampa Bay Testing</h1>
+  </div>
+    <span class="container-fluid">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <img class="d-block w-100 setsize" src="static/img/services3.jpg" alt="First slide" ;">
+    <!-- z-index: -100; -->
+      <!-- </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 setsize" src="static/img/tBTimg1.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 setsize" src="static/img/handsd.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+    </span>
+</section> -->
+
+
+
+<!-- <section id="hero-section ">
+  <!-- <div class="container centering2 boxenn">
+    <h1 class="hb-text2">Welcome<br> To Tampa Bay Testing</h1>
+  </div> -->
+    <div class="container-fluid">
+      <div class="row mainSlider">
+      <div id="main_slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner ">
+      <!-- <div class="item active">
+        <img class="d-block w-100 setsize after" src="static/img/girlHatBW.jpg" alt="First slide">
+      </div>
+      <div class="item">
+        <img class="d-block w-100 setsize after" src="static/img/tBTimg1.jpg" alt="Second slide">
+      </div>
+      <div class="item">
+        <img class="d-block w-100 setsize after" src="static/img/handsd.jpg" alt="Third slide">
+      </div> -->
+      <div class="item tbtherologo active">
+        <div class="carousel-caption d-none d-md-block capOne">
+          <h5 class="hb-text3">Mental Health. We're in this together.</h5>
+        </div>
+      </div>
+      <div class="item girlHatBW">
+        <div class="carousel-caption d-none d-md-block capOne">
+          <h5 class="hb-text3">Open yourself to a world of opportunity.</h5>
+        </div>
+      </div>
+      <div class="item tBTimg1">
+        <div class="carousel-caption d-none d-md-block capTwo">
+          <h5 class="hb-text3">Find new comfort within yourself.</h5>
+        </div>
+      </div>
+      <div class="item handsd">
+        <div class="carousel-caption d-none d-md-block capThree">
+          <h5 class="hb-text3">Never be afraid to reach out.</h5>
+        </div>
+      </div>
+    </div>
+    
+    <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div></div>
+    </div>
+</section><br><br><br><br>
 <!-- Flash sale count down timer -->
+<div class="container">
+
+  <div class="row pt-5">
+    <div class="col">
+
+      <div class="row text-center pb-3">
+        <div class="col-md-12 mx-md-auto">
+          <div class="overflow-hidden mb-1">
+            <h1 class="word-rotator slide font-weight-bold mb-0 appear-animation" style="font-size: 30pt;" data-appear-animation="maskUp">
+              <span>We are Tampa Bay Testing, We</span>
+              <span class="word-rotator-words bg-primary">
+                <b class="is-visible">Improve</b>
+                <b>Develop</b>
+                <b>Learn</b>
+              </span>
+              <span> With You</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <hr class="gratient">
+      <div class="row mt-3 mb-5">
+        <div class="col-md-6 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="800">
+          <h3 class="font-weight-bold mb-3" style="font-size: 18pt;">Our Mission</h3>
+          <p  style="font-size: 13pt;font-family: 'Merriweather', serif; line-height: 25pt;">At Tampa Bay Testing, we believe in conducting a thorough psychological evaluation to determine our clients' unique strengths and challenges. Our mission is to provide our patients with accurate diagnoses and recommendations that will allow them to reach their full potential.</p>
+        </div>
+        <div class="col-md-6 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="600">
+          <h3 class="font-weight-bold mb-3" style="font-size: 18pt;">Our Vision</h3>
+          <p  style="font-size: 13pt;font-family: 'Merriweather', serif; line-height: 25pt;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorem labore dignissimos explicabo ipsam quisquam doloribus qui in delectus, tempora repellendus quae deleniti eveniet fugiat illum illo aspernatur ratione libero?</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<section class="section section-primary border-0 mb-0 appear-animation" data-appear-animation="fadeIn" data-plugin-options="{'accY': -150}">
+  <div class="container">
+    <div class="row counters counters-sm pb-4 pt-3">
+      <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <div class="counter">
+          <i class="icons icon-user text-color-light"></i>
+          <strong class="text-color-light font-weight-extra-bold" data-to="100" data-append="+">0</strong>
+          <label class="text-4 mt-1 text-color-light">Happy Clients</label>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <div class="counter">
+          <i class="icons icon-badge text-color-light"></i>
+          <strong class="text-color-light font-weight-extra-bold" data-to="19">0</strong>
+          <label class="text-4 mt-1 text-color-light">Years In Business</label>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 mb-5 mb-sm-0">
+        <div class="counter">
+          <i class="icons icon-graph text-color-light"></i>
+          <strong class="text-color-light font-weight-extra-bold" data-to="0">0</strong>
+          <label class="text-4 mt-1 text-color-light">Patients Turned Away</label>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="counter">
+          <i class="icons icon-cup text-color-light"></i>
+          <strong class="text-color-light font-weight-extra-bold" data-to="10000"  data-append="+">0</strong>
+          <label class="text-4 mt-1 text-color-light">Hours Helping Others</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br><br>
+
   <section>
     <div class="row">
       <div class="col-6" style="text-align: center">
-        <h3 class="head3 container undhed"> Tampa Bay Testing </h3>
+        <h3 class="head3" > <strong>Tampa Bay Testing</strong> </h3>
         <hr class="hrstyle" style="height:7px">
         <br>
 
-        <p class="homeText">Tampa Bay Testing is dedicated to work with you to get yourself back in order. Michele Durrance, PsyD, a licensed clinical
+        <p class="homeText" style="font-size: 13pt;font-family: 'Merriweather', serif; line-height: 25pt;">Tampa Bay Testing is dedicated to work with you to get yourself back in order. Michele Durrance, PsyD, a licensed clinical
            psychologist in Florida, Arizona, Nevada and California (PSY17402), and her team provide their patients
             with a comprehensive array of therapy services with a personalized approach. Dr. Durrance specializes in
              psychological assessments for those who struggle with ADHD, family onset depression, and psychoeducational assessments.
@@ -132,7 +454,7 @@
               <br>
               <div class="row">
       <div class="col-12" style="text-align: center">
-        <a href="https://www.tedxmilehigh.com/talks/" class="btn btn-outline-warning btn-lg btn-block">MORE ABOUT US</a>
+        <a href="https://www.tedxmilehigh.com/talks/" class="btn btn-primary btn-lg bowton">MORE ABOUT US</a>
       </div>
     </div>
       </div>
@@ -144,49 +466,8 @@
 
 
   </section>
-<br>
-<!-- schedule appointment section -->
+<br><br><br>
 
-  <section>
-    <div class="bigdaddy">
-      <div class="col-12" style="text-align: center">
-          <a href="https://www.tedxmilehigh.com/talks/" class="btn btn-outline-primary btn-lg btn-block">SCHEDULE APPOINTMENT NOW</a>
-      </div>
-    </div>
-  </section>
-
-
-<!-- Second Hero with testimonials -->
-<section class="text-center" id="hero-section2">
-    <br>
-    <h1 class="testhed">Testimonials</h1>
-    <div class="container cont">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="static/img/kennedy.jpg" class="d-block w-100" alt="kennedy">
-      <div class="carousel-caption">
-        <p> “Honey Bee Electric is highly skilled in all electrical areas! Chris will provide an accurate quote and work hard to complete your job on time!”</p>
-        <p>Kathy, Alton NH</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="static/img/obama.jpg" class="d-block w-100" alt="obama">
-      <div class="carousel-caption">
-        <p> "Was searching for a <strong>trustworthy electrician</strong> for months. Chris came out the same day I contacted him. Very professional and gives an honest price for whatever you need done."</p>
-        <p>Riley, Gilford NH</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="static/img/rick.jpg" class="d-block w-100" alt="rick">
-      <div class="carousel-caption">
-        <p>  “Change will not come is we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek.”</p>
-        <p>Barrack Obama</p>
-      </div>
-    </div>
-  </div></div>
-      </div>
-  </section>
 
 
 
@@ -194,7 +475,7 @@
   <!-- Sponsor Section -->
 
   <section class="text-center" id="contact-section">  <br>
-    <h3 class=" head32 conatiner">Get In Touch:</h3>
+    <h3 class=" head32 conatiner" style="color: white;">Connect with us:</h3>
     <hr class="hrstyle" style="height:7px">
     <!-- Build out your social contacts  -->
     
@@ -206,13 +487,65 @@
 
         <div class="row">
 <hr>
-          <p style="text-align: left">CORPORATE</p>
+
           <div class="container col-12">
             <div class="row">
 
               
-                            
-              <div class="col-5 credits">
+
+
+
+                    <div class="col-lg-6 text-center pt-5">
+                      <h2 class="text-8 line-height-4 text-lg-10 line-height-lg-1 font-weight-semibold"  style="color: white;">Send us a Message</h2>
+
+                      <form class="contact-form form-errors-light" action="php/contact-form.php" method="POST">
+                        <input type="hidden" value="Contact Form" name="subject" id="subject">
+                        <div class="form-group col-lg-12 ms-auto">
+                          <div class="contact-form-success alert alert-success d-none">
+                            Message has been sent to us.
+                          </div>
+              
+                          <div class="contact-form-error alert alert-danger d-none">
+                            Error sending your message.
+                            <span class="mail-error-message text-1 d-block"></span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-lg-6 pe-lg-2">
+                            <!-- <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" placeholder="Your Name..." name="name" id="name" required> -->
+                            {{ form.name|as_crispy_field }}
+                          </div>
+                          <div class="form-group col-lg-6 ps-lg-2">
+                            <!-- <input type="text" value="" data-msg-required="Please enter your phone." maxlength="100" class="form-control text-3 h-auto py-2" placeholder="Your Phone..." name="phone" id="phone" required> -->
+                            {{ form.email|as_crispy_field }}
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <!-- <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" placeholder="Your Email Address..." name="email" id="email" required> -->
+                          {{ form.subject|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                          <!-- <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" placeholder="Your Email Address..." name="email" id="email" required> -->
+                          {{ form.phone|as_crispy_field }}
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <!-- <textarea maxlength="5000" data-msg-required="Please enter your message." rows="4" class="form-control text-3 h-auto py-2" placeholder="Your Message..." name="message" id="message" required></textarea> -->
+                            {{ form.message|as_crispy_field }}
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <input type="submit" value="SUBMIT" class="btn btn-primary font-weight-semi-bold mb-lg-5 px-5 py-3" data-loading-text="Loading...">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+
+              
+         
+              <!-- <div class="col col-lg-5 col-sm-12 credits">
                 <form class="contact-form">
                   <label for="">Name</label><br />
                   <input class="name" type="text" placeholder="name" /><br />
@@ -230,11 +563,10 @@
                   ><br />
                   <button type="button" class="btn btn-primary btn-lg" onclick="test()">Submit</button>
                 </form>
-              </div>
+              </div> -->
+              <div class="col col-lg-1 col-sm-0"></div>
 
-              <div class="col-2"></div>
-
-              <div class="col-5 credits">
+              <div class="col col-lg-5 col-sm-12 credits">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.6952383944786!2d-82.53805168451463!3d27.941986721747195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c2ec34842d17%3A0x4450e52698f7d63!2sTampa%20Bay%20Marina!5e0!3m2!1sen!2sus!4v1633127161347!5m2!1sen!2sus" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
             </div>
@@ -242,33 +574,199 @@
         </div>
         <hr>
     </div>
+
+    
+  
+
     <br><br>  <!-- Footer section -->
-    <!-- <footer class="footer mt-auto py-8 bg-dark"> -->
-      <div class="footer bg-dark" >
-   <div class="container" id="pigga">
-     <div class="row">
-      <div class="col col-lg-4 col-sm-6">
-        <a href="https://goo.gl/maps/UdZpxziqyMLUHK6v7"><i class="fas fa-map-marked-alt"> Tampa Bay Marina Center 205 South Hoover Blvd. Tampa 33609</i></a>
-      </div>
-      <div class="col col-lg-4 col-sm-6">
-        <a href="mailto:DrDurrance@me.com"><i class="far fa-envelope"> DrDurrance@me.com</i></a>
-      </div>
-      <div class="col col-lg-4 col-sm-6">
-        <a href="tel:813421-2192"><i class="fas fa-phone-alt"> (813) 421-2192</i></a>
-      </div>
-     </div>
-     <div class="row">
-       <div class="col col-12">
-       <p class="foottext">©2020 by Dr. Michele Durrance Psychologist.</p></div>
-     </div>
-    </div></div>
-  <!-- </footer> -->
-  </section>
+    <section>
+      <footer id="footer" class="footer-reveal pt-5 mt-0" style="position: relative !important; height: auto; z-index: 10000 !important">
+        <div class="container my-4">
+            <div class="row py-5">
+                <div class="col-md-5 col-lg-4 mb-5 mb-lg-0">
+                    <h5 class="text-6 text-transform-none font-weight-semibold text-color-light mb-4">Contact Details</h5>
+                    <a href="https://goo.gl/maps/UdZpxziqyMLUHK6v7"><p class="text-4 mb-1">
+                        Tampa Bay Marina Center </p>
+                    <p class="text-4 mb-4 pb-1">205 South Hoover Blvd. Tampa 33609</p></a>
+      
+                    <a href="tel:813421-2192"><p class="text-5 mb-1 pt-2">Call: (813) 421-2192</p></a>
+                    <p class="text-5 mb-0">Email: <a href="mailto:DrDurrance@me.com">DrDurrance@me.com</a></p>
+                </div>
+                <div class="col-md-7 col-lg-6 mb-5 mb-lg-0">
+                    <h5 class="text-6 text-transform-none font-weight-semibold text-color-light mb-4">Pages</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="mb-1"><a href="/" class="text-4 link-hover-style-1">Home</a></p>
+                            <p class="mb-1"><a href="/assessments" class="text-4 link-hover-style-1">Assessments</a></p>
+                            <p class="mb-1"><a href="/about" class="text-4 link-hover-style-1">About Us</a></p>
+                            <!-- <p class="mb-1"><a href="elements-tooltips-popovers.html" class="text-4 link-hover-style-1">Forms/FAQ</a></p>
+                            <p class="mb-1"><a href="elements-sticky-elements.html" class="text-4 link-hover-style-1">Contact</a></p> -->
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-1"><a href="/services" class="text-4 link-hover-style-1">Forms/FAQ</a></p>
+                            <p class="mb-1"><a href="/contactUs" class="text-4 link-hover-style-1">Contact</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="text-6 text-transform-none font-weight-semibold text-color-light mb-4">Follow Us</h5>
+                    <ul class="footer-social-icons social-icons social-icons-clean social-icons-big social-icons-opacity-light social-icons-icon-light mt-1">
+                        <li class="social-icons-facebook"><a href="https://www.facebook.com/drdurrance/" target="_blank" title="Facebook"><i class="fab fa-facebook-f text-6"></i></a></li>
+                        <li class="social-icons-twitter"><a href="https://twitter.com/psychdoc917?lang=en" target="_blank" title="Twitter"><i class="fab fa-twitter text-6"></i></a></li>
+                        <li class="social-icons-linkedin"><a href="https://www.linkedin.com/in/michele-durrance-b6885977/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-6"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright footer-copyright-style-2">
+            <div class="container py-2">
+                <div class="row py-4">
+                    <div class="col d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                        <p>© Copyright 2021. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+      </section>
 
 
 
   <!-- Bootstrap Javascript -->
+  <!-- <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var otr = document.getElementById("stayy");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+        otr.classList.add("stayy")
+      } else {
+        navbar.classList.remove("sticky");
+        otr.classList.remove("stayy")
+      }
+    }
+
+    
+    </script> -->
+  <!-- template stuff -->
+  <!-- map stuff -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+		<script>
+
+			/*
+			Map Settings
+
+				Find the Latitude and Longitude of your address:
+					- https://www.latlong.net/
+					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+			*/
+
+			function initializeGoogleMaps() {
+				// Map Markers
+				var mapMarkers = [{
+					address: "New York, NY 10017",
+					html: "<strong>Porto</strong><br>New York, NY 10017",
+					icon: {
+						image: "/static/img/pin.png",
+						iconsize: [26, 46],
+						iconanchor: [12, 46]
+					},
+					popup: true
+				}];
+
+				// Map Initial Location
+				var initLatitude = 40.75198;
+				var initLongitude = -73.96978;
+
+				// Map Extended Settings
+				var mapSettings = {
+					controls: {
+						draggable: (($.browser.mobile) ? false : true),
+						panControl: true,
+						zoomControl: true,
+						mapTypeControl: true,
+						scaleControl: true,
+						streetViewControl: true,
+						overviewMapControl: true
+					},
+					scrollwheel: false,
+					markers: mapMarkers,
+					latitude: initLatitude,
+					longitude: initLongitude,
+					zoom: 16
+				};
+
+				var map = $('#googlemaps').gMap(mapSettings),
+					mapRef = $('#googlemaps').data('gMap.reference');
+
+				// Styles from https://snazzymaps.com/
+				var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}];
+
+				var styledMap = new google.maps.StyledMapType(styles, {
+					name: 'Styled Map'
+				});
+
+				mapRef.mapTypes.set('map_style', styledMap);
+				mapRef.setMapTypeId('map_style');
+
+				// Change text-center Position
+				if( $(window).width() > 767 ) {
+					if( $('html[dir="rtl"]').get(0) ) {
+						mapRef.panBy(250,0);
+					} else {
+						mapRef.panBy(-250,0);
+					}
+				}
+			}
+
+			// Initialize Google Maps when element enter on browser view
+			theme.fn.intObs( '.google-map', 'initializeGoogleMaps()', {} );
+
+			// Map text-center At
+			var mapCenterAt = function(options, e) {
+				e.preventDefault();
+				$('#googlemaps').gMap("centerAt", options);
+			}
+
+		</script>
+  <!-- Vendor -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/jquery.appear/jquery.appear.min.js"></script>
+  <script src="/static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/static/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/jquery.validation/jquery.validate.min.js"></script>
+  <script src="/static/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+  <script src="/static/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+  <script src="/static/vendor/lazysizes/lazysizes.min.js"></script>
+  <script src="/static/vendor/isotope/jquery.isotope.min.js"></script>
+  <script src="/static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="/static/vendor/vide/jquery.vide.min.js"></script>
+  <script src="/static/vendor/vivus/vivus.min.js"></script>
+
+  <!-- Theme Base, Components and Settings -->
+  <script src="/static/js/theme.js"></script>
+
+  <!-- Circle Flip Slideshow Script -->
+  <script src="/static/vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+  <!-- Current Page Views -->
+  <script src="/static/js/views/view.home.js"></script>
+
+  <!-- Theme Custom -->
+  <script src="/static/js/custom.js"></script>
+
+  <!-- Theme Initialization Files -->
+  <script src="/static/js/theme.init.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 
 </html>

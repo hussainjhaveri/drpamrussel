@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags%}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <!-- Remember to replace this with your title! -->
+    <title>Tampa Bay Testing</title>
+    
+    <!-- Link for boostrap from: 
+    https://getbootstrap.com/docs/5.0/getting-started/introduction -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="/static/js/logic.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+   <!-- <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+   <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+   <script src="https://kit.fontawesome.com/d35adc8c44.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- template stuff -->
+
+    		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+    <meta name="keywords" content="HTML5 Template" />
+		<meta name="description" content="Porto - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+    <!-- TODO updata meta tags -->
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/vendor/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="/static/vendor/animate/animate.compat.css">
+		<link rel="stylesheet" href="/static/vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="/static/vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="/static/css/theme.css">
+		<link rel="stylesheet" href="/static/css/theme-elements.css">
+		<link rel="stylesheet" href="/static/css/theme-blog.css">
+		<link rel="stylesheet" href="/static/css/theme-shop.css">
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="/static/vendor/circle-flip-slideshow/css/component.css">
+
+		<!-- Skin CSS -->
+		<link id="skinCSS" rel="stylesheet" href="/static/css/skins/default.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="/static/css/custom.css">
+
+		<!-- Head Libs -->
+		<script src="/static/vendor/modernizr/modernizr.min.js"></script>
+
+
+
+
+    <!-- Custom styles (these can extend bootstrap which is JUST CSS!) -->
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body data-bs-spy="scroll">
+
+  <!-- Navbar: Skip this and start with the hero section. When You're ready to return start by copy/pasting this snippet:
+
+  https://getbootstrap.com/docs/5.0/components/navbar/#nav 
+  -->
+
+  
+  <!-- PASTE NAVBAR CODE TO CUSTOMIZE -->
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-lg p-0">
+    <div class="container-fluid" id="stayy">
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item1">
+            <a class="nav-link" aria-current="page" href="tel:813421-2192"><i class="fas fa-phone-alt"> (813) 421-2192</i></a>
+          </li>
+          <li class="nav-item"><p class="quiet">--------</p></li>
+          <li class="nav-item1">
+            <a class="nav-link" href="mailto:DrDurrance@me.com"><i class="far fa-envelope"> DrDurrance@me.com</i></a>
+          </li>
+          <li class="nav-item1">
+            <a class="nav-link" href="https://www.linkedin.com/in/aidan-arnold/" style="color: Dodgerblue;"><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <nav class="navbar navbar-expand-sm navbar-light shadow-lg p-2 justify-content-end" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" style="color: #564A4A" id="logo-img"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="assessments">Assessments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about" tabindex="-1">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services" tabindex="-1">Forms/FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactUs" tabindex="-1">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  {% if messages %}
+    {% for message in messages %}
+    
+    <div class="alert alert-primary bigboy" role="alert">
+      <p class="tomm">Thank you for your submission!</p>
+    </div>
+
+    <!-- <script>
+      alert("Thank you for your submission!");
+    </script> -->
+    <!-- <div class="container colorBGN2">
+      <div class="row">
+        <div class="col col-12">
+            <h1  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </h1>
+        </div>
+      </div>
+    </div> -->
+    {% endfor %}
+{% endif %}
+
+<!-- First Hero image with button -->
+
+<!-- <header id="overlayer">
+  <section id="hero-section">
+    <div class="container centering2 boxenn">
+      <h1 class="hb-text2">Welcome...<br> To Tampa Bay Testing</h1>
+    </div>
+      <div class="container centering">
+        <h2 class="col-12">
+          <h1 class="hb-text">How can we Brighten your day?</h1>
+          <br>
+          <button type="button" class="btn btn-primary btn-lg" onclick="test()">CONTACT US NOW</button>
+        </h2>
+      </div>
+  </section>
+</header>
+
+<br><br> -->
+
+<!-- First Hero Image is being replaced by carousel with overlay -->
+
+<!-- <section id="hero-section ">
+  <div class="container centering2 boxenn">
+    <h1 class="hb-text2">Welcome...<br> To Tampa Bay Testing</h1>
+  </div>
+    <span class="container-fluid">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <img class="d-block w-100 setsize" src="static/img/services3.jpg" alt="First slide" ;">
+    <!-- z-index: -100; -->
+      <!-- </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 setsize" src="static/img/tBTimg1.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 setsize" src="static/img/handsd.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+    </span>
+</section> -->
+
+
+
+
+<section id="hero-section ">
+  <!-- <div class="container centering2 boxenn">
+    <h1 class="hb-text2">Welcome<br> To Tampa Bay Testing</h1>
+  </div> -->
+    <div class="container-fluid">
+      <div class="row mainSlider">
+      <div id="main_slider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#main_slider" data-slide-to="0" class="active"></li>
+      <li data-target="#main_slider" data-slide-to="1" class="active"></li>
+      <li data-target="#main_slider" data-slide-to="2" class="active"></li>
+      <li data-target="#main_slider" data-slide-to="3" class="active"></li>
+    </ol>
+    <div class="carousel-inner ">
+      <!-- <div class="item active">
+        <img class="d-block w-100 setsize after" src="static/img/girlHatBW.jpg" alt="First slide">
+      </div>
+      <div class="item">
+        <img class="d-block w-100 setsize after" src="static/img/tBTimg1.jpg" alt="Second slide">
+      </div>
+      <div class="item">
+        <img class="d-block w-100 setsize after" src="static/img/handsd.jpg" alt="Third slide">
+      </div> -->
+      <div class="item tbtherologo active">
+          
+      </div>
+      <div class="item girlHatBW">
+        <div class="carousel-caption d-none d-md-block capOne">
+          <h5 class="hb-text2">Open yourself to a world of opportunity.</h5>
+        </div>
+      </div>
+      <div class="item tBTimg1">
+        <div class="carousel-caption d-none d-md-block capTwo">
+          <h5 class="hb-text2">Find new comfort within yourself.</h5>
+        </div>
+      </div>
+      <div class="item handsd">
+        <div class="carousel-caption d-none d-md-block capThree">
+          <h5 class="hb-text2">Never be afraid to reach out.</h5>
+        </div>
+      </div>
+    </div>
+    
+    <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div></div>
+    </div>
+</section><br><br><br><br>
+<!-- Flash sale count down timer -->
+  <section>
+    <div class="row">
+      <div class="col-6" style="text-align: center">
+        <h3 class="head3" > <strong>Tampa Bay Testing</strong> </h3>
+        <hr class="hrstyle" style="height:7px">
+        <br>
+
+        <p class="homeText">Tampa Bay Testing is dedicated to work with you to get yourself back in order. Michele Durrance, PsyD, a licensed clinical
+           psychologist in Florida, Arizona, Nevada and California (PSY17402), and her team provide their patients
+            with a comprehensive array of therapy services with a personalized approach. Dr. Durrance specializes in
+             psychological assessments for those who struggle with ADHD, family onset depression, and psychoeducational assessments.
+              In addition to assessments, she also provides cognitive behavioral therapy for adults, adolescents and children.</p>
+              <br>
+              <div class="row">
+      <div class="col-12" style="text-align: center">
+        <a href="https://www.tedxmilehigh.com/talks/" class="btn btn-primary btn-lg bowton">MORE ABOUT US</a>
+      </div>
+    </div>
+      </div>
+      <div class="col-6 imgbak">
+
+      </div>
+    </div>
+  <br>
+
+
+  </section>
+<br><br><br>
+
+
+
+
+
+  <!-- Sponsor Section -->
+
+  <section class="text-center" id="contact-section">  <br>
+    <h3 class=" head32 conatiner">Connect with us:</h3>
+    <hr class="hrstyle" style="height:7px">
+    <!-- Build out your social contacts  -->
+    
+    <!-- See https://icons.getbootstrap.com/ -->
+    <br>
+    <div class="container">
+
+      <!-- row one -->
+
+        <div class="row">
+<hr>
+
+          <div class="container col-12">
+            <div class="row">
+
+              
+                            
+              <div class="col col-lg-5 col-sm-12 credits">
+                <form class="contact-form">
+                  <label for="">Name</label><br />
+                  <input class="name" type="text" placeholder="name" /><br />
+                  <label for="">Email</label><br />
+                  <input class="email" type="email" placeholder="email" /><br />
+                  <label for="">Message</label><br />
+                  <textarea
+                    class="message"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholder="message"
+                  ></textarea
+                  ><br />
+                  <button type="button" class="btn btn-primary btn-lg" onclick="test()">Submit</button>
+                </form>
+              </div>
+
+              <div class="col col-lg-2 col-sm-0"></div>
+
+              <div class="col col-lg-5 col-sm-12 credits">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.6952383944786!2d-82.53805168451463!3d27.941986721747195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c2ec34842d17%3A0x4450e52698f7d63!2sTampa%20Bay%20Marina!5e0!3m2!1sen!2sus!4v1633127161347!5m2!1sen!2sus" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+    </div>
+
+    
+    
+    <!-- form -->
+    
+    <section>
+      <h1>send us an email</h1>
+      <p>send us a message please</p>
+          <form enctype="multipart/form-data" method ="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.name|as_crispy_field }}
+                    {{ form.email|as_crispy_field }}
+                    {{ form.phone|as_crispy_field }}
+                    {{ form.subject|as_crispy_field }}
+                    {{ form.message|as_crispy_field }}
+    
+                    </label>
+    
+    
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-light btn-xl text-uppercase" id="sendMessageButton" type="submit">Submit</button>
+                </div>
+            </form>
+    
+    </section>
+
+    <br><br>  <!-- Footer section -->
+    <!-- <footer class="footer mt-auto py-8 bg-dark"> -->
+      <div class="footer bg-dark" >
+   <div class="container" id="pigga">
+     <div class="row">
+      <div class="col col-lg-4 col-sm-6">
+        <a href="https://goo.gl/maps/UdZpxziqyMLUHK6v7"><i class="fas fa-map-marked-alt"> Tampa Bay Marina Center 205 South Hoover Blvd. Tampa 33609</i></a>
+      </div>
+      <div class="col col-lg-4 col-sm-6">
+        <a href="mailto:DrDurrance@me.com"><i class="far fa-envelope"> DrDurrance@me.com</i></a>
+      </div>
+      <div class="col col-lg-4 col-sm-6">
+        <a href="tel:813421-2192"><i class="fas fa-phone-alt"> (813) 421-2192</i></a>
+      </div>
+     </div>
+     <div class="row">
+       <div class="col col-12">
+       <p class="foottext">©2020 by Dr. Michele Durrance Psychologist.</p></div>
+     </div>
+    </div></div>
+  <!-- </footer> -->
+  </section>
+
+
+
+  <!-- Bootstrap Javascript -->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var otr = document.getElementById("stayy");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+        otr.classList.add("stayy")
+      } else {
+        navbar.classList.remove("sticky");
+        otr.classList.remove("stayy")
+      }
+    }
+
+    
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- template stuff -->
+  <!-- Vendor -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/jquery.appear/jquery.appear.min.js"></script>
+  <script src="/static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/static/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/jquery.validation/jquery.validate.min.js"></script>
+  <script src="/static/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+  <script src="/static/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+  <script src="/static/vendor/lazysizes/lazysizes.min.js"></script>
+  <script src="/static/vendor/isotope/jquery.isotope.min.js"></script>
+  <script src="/static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="/static/vendor/vide/jquery.vide.min.js"></script>
+  <script src="/static/vendor/vivus/vivus.min.js"></script>
+
+  <!-- Theme Base, Components and Settings -->
+  <script src="/static/js/theme.js"></script>
+
+  <!-- Circle Flip Slideshow Script -->
+  <script src="/static/vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+  <!-- Current Page Views -->
+  <script src="/static/js/views/view.home.js"></script>
+
+  <!-- Theme Custom -->
+  <script src="/static/js/custom.js"></script>
+
+  <!-- Theme Initialization Files -->
+  <script src="/static/js/theme.init.js"></script>
+
+</body>
+
+</html>    
