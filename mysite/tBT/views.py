@@ -93,8 +93,17 @@ class contactUs(View):
 def about(request):
     return render(request, 'about.html')
 
-def ugh(request):
-    return render(request, 'ugh.html')
+def mockindex(request):
+    return render(request, 'Mockup/index.html')
 
-def assessments(request):
-    return render(request, 'assessments.html')
+def aboutmock(request):
+    return render(request, 'Mockup/about.html')
+
+def testimonial(request):
+    return render(request, 'Mockup/testimonials.html')
+
+def faq(request):
+    return render(request, 'Mockup/faq.html')
+
+def newsreports(request):
+    return render(request, 'Mockup/newsreports.html')

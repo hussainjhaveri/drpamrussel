@@ -8,8 +8,10 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     path('contactUs/', views.contactUs.as_view(), name='contactUs'),
     path('about/', views.about, name='about'),
-    path('ugh/', views.ugh, name='ugh'),
-    path('assessments/', views.assessments, name='assessments'),
-
+    path('mockindex/', views.mockindex, name='mockindex'),
+    path('aboutmock/', views.aboutmock, name='aboutmock'),
+    path('testimonial/', views.testimonial, name='testimonial'),
+    path('faq/', views.faq, name='faq'),
+    path('newsreports/', views.newsreports, name='newsreports'),
 
 ]
